@@ -1,0 +1,3 @@
+
+
+With debug turned off Django won't handle static files for you any more - your production web server (Apache or something) should take care of that.

@@ -1,0 +1,14 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'app_2/style_app_2.css' %}">
+<link rel="shortcut icon" type=type="image/x-icon" href="{% static 'app_2/images/favicon.ico' %}" />
+
+{% if param1 %}
+    <ol>
+    {% for mot in param1 %}
+        <li> <a href="{% url 'app_2:index' %}">{{ mot}}</a></li>
+    {% endfor %}
+    </ol>
+{% else %}
+    <p>Essai.</p>
+{% endif %}

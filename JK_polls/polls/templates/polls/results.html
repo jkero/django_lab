@@ -1,0 +1,14 @@
+{% include "polls/jack.html" %}
+{% load les_filtres_jk %}
+<h1>{{ question.question_text }}</h1>
+
+<table class="jktable">
+{% for choice in question.choice_set.all %}
+    {% comment %} choice.totvotes=3 {% endcomment %}
+    <tr><td>{{ choice.choice_text }} </td><td> {{ choice.votes }} vote{{ choice.votes|pluralize }}</td><td>{{ choice.votes|diviser:question.tot_votes }} %</td></tr>
+    {% endfor %}
+</table>
+
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<p></p>
+<a href="{% url 'polls:index' %}">Retour</a>
