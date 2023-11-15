@@ -20,6 +20,7 @@ print("****************BASE_DIR************** %s" %BASE_DIR, file=sys.stderr)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-557pv-ajclg+t6h%_5%dcmp6f-1)k*k!_o6#=o#fhc+7-)(+x4'
 
@@ -104,12 +105,24 @@ WSGI_APPLICATION = 'JK_polls.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.normpath(os.path.join(BASE_DIR,"db.sqlite3")),
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.normpath(os.path.join(BASE_DIR,"db.sqlite3")),
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'jk_polls',
+         'USER': 'jk_polls',
+         'PASSWORD': 'admin_jk_polls',
+         'HOST' : 'localhost',
+         'port': '',
+     }
 }
+
 
 
 # Password validation
@@ -156,7 +169,7 @@ STORAGES= {
 }
 
 STATIC_URL = "static/"
-STATICFILES_DIRS =  [os.path.normpath(os.path.join(BASE_DIR, "static")), os.path.normpath(os.path.join(BASE_DIR, "statpolls")) ]
+STATICFILES_DIRS =  [os.path.normpath(os.path.join(BASE_DIR, "static")), os.path.normpath(os.path.join(BASE_DIR, "static\polls")) ]
 
 print("*************STATICFILES_DIRS*********** %s" %STATICFILES_DIRS, file=sys.stderr)
 

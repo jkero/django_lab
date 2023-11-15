@@ -25,8 +25,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('favicon.ico', RedirectView.as_view(url='/static/images/favicon.ico'))
     ]
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns += [
-    path('mode_debug/', include(debug_toolbar.urls))]
+# if settings.DEBUG:
+#     import debug_toolbar
+#     urlpatterns += [
+#     path('mode_debug/', include(debug_toolbar.urls))]
 

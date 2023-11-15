@@ -10,4 +10,5 @@ app_name = "app_2"
 urlpatterns = [
     path("", views.index, name="index"),
     path('favicon.ico', RedirectView.as_view(url='/static/images/favicon.ico')),
+    path("create/", views.create_note, name="create"),
 ]

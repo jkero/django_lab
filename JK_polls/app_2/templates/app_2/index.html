@@ -1,5 +1,8 @@
 {% load static %}
 
+ <script src="{% static 'app_2/js/jquery37.js' %}"></script>
+ <script src="{% static 'app_2/js/testajax.js' %}"></script>
+ <!--<script src="{% static 'app_2/js/conn.js' %}"></script> -->
 <link rel="stylesheet" href="{% static 'app_2/style_app_2.css' %}">
 <link rel="shortcut icon" type=type="image/x-icon" href="{% static 'app_2/images/favicon.ico' %}" />
 
@@ -10,5 +13,16 @@
     {% endfor %}
     </ol>
 {% else %}
-    <p>Essai.</p>
+
 {% endif %}
+<p>Essai.</p>
+<!--      <div id="my-div"><script type="module" src="{% static 'app_2/js/conn.js' %}">
+ 	            console.log(pool.getConnetion());
+          </script><form> <button onclick="console.log(pool.getConnetion());">Change color</button>
+           </form>
+      </div>  -->
+<form>
+    <input type="text"  id="nom" width="5" placeholder="un param par défaut #">
+        <input type="text" id="date" width="8" placeholder="2023-11-14 12:00:00" value="2023-11-14 12:00:00">
+    <input type="button" value="Submit" onClick="create_note();">
+</form>
