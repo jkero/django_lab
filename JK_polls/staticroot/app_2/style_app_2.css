@@ -1,0 +1,18 @@
+li a {
+    color: #550055;
+}
+
+body {
+    background: white url("images/django-bg.jpg") no-repeat; ; background-size: 800px 600px;
+}
+.jktable {
+    border: 1px solid blue;
+
+    td {padding: 5px;
+        background-color: rgba(0, 200, 0, 0.1);;
+        border-style: dotted;
+        border-width: 1px;
+}
+margin-bottom: 10px;
+
+}
